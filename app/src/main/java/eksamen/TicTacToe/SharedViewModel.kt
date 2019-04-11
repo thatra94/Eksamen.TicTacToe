@@ -2,6 +2,7 @@ package eksamen.TicTacToe
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
+import android.content.Context
 import android.util.Log
 
 class SharedViewModel : ViewModel() {
@@ -17,7 +18,7 @@ class SharedViewModel : ViewModel() {
     fun setPlayerTwo(playerTwoName: CharSequence) {
         playerTwo.value = playerTwoName
     }
-
+/*
     fun addScore(playerName: String) {
 
         var count = score[playerName]
@@ -40,5 +41,14 @@ class SharedViewModel : ViewModel() {
             (key, value) -> println("$key = $value")
         }*/
     }
+
+    fun saveToFile() {
+
+
+    }
+
+    fun getHeighscoreFile() {
+
+    } */
 
 }

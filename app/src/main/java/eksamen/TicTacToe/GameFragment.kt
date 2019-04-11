@@ -2,8 +2,11 @@ package eksamen.TicTacToe
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Context
+import android.content.Context.MODE_PRIVATE
 import android.graphics.Color
 import android.os.Bundle
+import android.provider.Settings.Global.putInt
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentTransaction
 import android.util.Log
@@ -76,6 +79,7 @@ class GameFragment : Fragment(), View.OnClickListener {
             R.id.square8 -> squareID = 8
             R.id.square9 -> squareID = 9
         }
+        saveHighScore(sharedView.playerOne.value.toString())
 
         playGame(squareID, squareSelected)
         Log.d("test", squareID.toString())
@@ -145,11 +149,11 @@ class GameFragment : Fragment(), View.OnClickListener {
         if (winner != -1) {
             if(winner == 1) {
                 //Log.d("testa", sharedView.playerOne.value.toString())
-                sharedView.addScore(sharedView.playerOne.value.toString())
+                //sharedView.addScore(sharedView.playerOne.value.toString())
                 Toast.makeText(activity, sharedView.playerOne.value.toString() + " won the game", Toast.LENGTH_LONG).show()
             }
             else {
-                sharedView.addScore(sharedView.playerTwo.value.toString())
+                //sharedView.addScore(sharedView.playerTwo.value.toString())
                 Toast.makeText(activity, sharedView.playerTwo.value.toString() + " won the game", Toast.LENGTH_LONG).show()
             }
             disableButtons()
@@ -194,6 +198,21 @@ class GameFragment : Fragment(), View.OnClickListener {
                 else -> square1
             }
             playGame(squareID, buttonSelected)
+        }
+    }
+
+
+    private fun saveHighScore(playerName: String) {
+
+        val pref = activity?.getSharedPreferences("score", Context.MODE_PRIVATE)
+        val map = pref!!.all
+        val playerScore = pref?.getInt(playerName, 0)
+        val editor = pref?.edit()
+        editor?.putInt(playerName, playerScore!!.inc())
+        editor?.apply()
+
+        map.forEach { (key, value) ->
+            println("$key = $value")
         }
     }
 }
