@@ -1,17 +1,13 @@
 package eksamen.TicTacToe
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.ListView
 import kotlinx.android.synthetic.main.fragment_high_score.*
-import kotlinx.android.synthetic.main.list_item.*
 
 class HighScoreFragment : Fragment() {
 
@@ -37,7 +33,7 @@ class HighScoreFragment : Fragment() {
         //val arrayMap = ArrayList<Map<String, String>>()
         //map?.toSortedMap()
         val keys  = ArrayList(map?.keys)
-        val values = arrayListOf(map?.values.toString())
+        val values = ArrayList(map?.values)
         //val arrayList = arrayListOf<String>("1", "2", "3")
 
         //val adapter = ArrayAdapter(activity?.applicationContext, R.layout.list_item, keys)

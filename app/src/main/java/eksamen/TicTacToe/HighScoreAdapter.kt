@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import kotlinx.android.synthetic.main.list_score.view.*
 
-class HighScoreAdapter(val context: Context, private val name: ArrayList<String>, private val score : ArrayList<String>) : BaseAdapter() {
+class HighScoreAdapter(val context: Context, private val name: ArrayList<String>, private val score: ArrayList<Any?>) : BaseAdapter() {
 
     private val inflater: LayoutInflater
             = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -28,7 +28,7 @@ class HighScoreAdapter(val context: Context, private val name: ArrayList<String>
 
     override fun getItemId(position: Int): Long {
         if(position >= name.size) {
-            return score[position].toLong()
+            return score[position] as Long
         }
         return name[position].toLong()
     }
@@ -44,7 +44,7 @@ class HighScoreAdapter(val context: Context, private val name: ArrayList<String>
         }*/
 
         val playerName = name[position]
-        var playerScore = score[0]
+        var playerScore = score[position]
         val playerTextView = inflater.inflate(R.layout.list_score, parent, false)
 
         playerTextView.userName.text = playerName.toString()
