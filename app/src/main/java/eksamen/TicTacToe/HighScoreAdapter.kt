@@ -20,10 +20,10 @@ class HighScoreAdapter(val context: Context, private val name: ArrayList<String>
     }*/
 
     override fun getItem(position: Int): Any {
-        if(position >= name.size) {
+        /*if(position >= name.size) {
             return score[position]
-        }
-        return name[position]
+        }*/
+        return position
     }
 
     override fun getItemId(position: Int): Long {
@@ -43,7 +43,7 @@ class HighScoreAdapter(val context: Context, private val name: ArrayList<String>
             return inflater.inflate(R.layout.lixst_score, parent, false)
         }*/
 
-        val playerName = name[0]
+        val playerName = name[position]
         var playerScore = score[0]
         val playerTextView = inflater.inflate(R.layout.list_score, parent, false)
 
