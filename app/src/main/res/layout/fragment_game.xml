@@ -6,6 +6,8 @@
         android:layout_height="match_parent"
         android:gravity="center"
         tools:context="eksamen.TicTacToe.GameFragment"
+        android:background="#333333
+"
 >
 
     <TableRow
@@ -17,9 +19,12 @@
         <Chronometer
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:textSize="20dp"
+                android:textSize="30dp"
                 android:textAlignment="center"
-                android:id="@+id/timer"/>
+                android:id="@+id/timer"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+        />
     </TableRow>
 
 
@@ -36,6 +41,8 @@
                 android:textSize="25dp"
                 android:textAlignment="center"
                 android:id="@+id/textView1"
+                android:textColor="#ff471a"
+                android:textStyle="bold"
 
         />
         <TextView
@@ -45,13 +52,12 @@
                 android:textSize="25dp"
                 android:layout_weight="100"
                 android:textAlignment="center"
-                android:id="@+id/textView2"/>
+                android:id="@+id/textView2"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+        />
 
     </TableRow>
-
-    />
-
-
     <TableRow
 
             android:layout_width="match_parent"
@@ -63,26 +69,35 @@
                 android:id="@+id/square1"
                 android:layout_width="40pt"
                 android:layout_height="40pt"
-                android:background="@color/colorPrimaryDark"
+                android:background="#ffffff"
                 android:layout_margin="5pt"
                 android:text=""
+                android:textAlignment="center"
+                android:textSize="75dp"
         />
 
         <Button
                 android:id="@+id/square2"
                 android:layout_width="40pt"
                 android:layout_height="40pt"
-                android:background="@color/colorPrimaryDark"
+                android:background="#ffffff"
                 android:layout_margin="5pt"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="75dp"
+        />
 
         <Button
                 android:id="@+id/square3"
                 android:layout_width="40pt"
                 android:layout_height="40pt"
-                android:background="@color/colorPrimaryDark"
+                android:background="#ffffff"
                 android:layout_margin="5pt"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="75dp"
+
+        />
     </TableRow>
 
     <TableRow
@@ -95,24 +110,33 @@
                 android:id="@+id/square4"
                 android:layout_width="40pt"
                 android:layout_height="40pt"
-                android:background="@color/colorPrimaryDark"
+                android:background="#ffffff"
                 android:layout_margin="5pt"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="75dp"
+        />
         <Button
                 android:id="@+id/square5"
                 android:layout_width="40pt"
                 android:layout_height="40pt"
-                android:background="@color/colorPrimaryDark"
+                android:background="#ffffff"
                 android:layout_margin="5pt"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="75dp"
+        />
 
         <Button
                 android:id="@+id/square6"
                 android:layout_width="40pt"
                 android:layout_height="40pt"
-                android:background="@color/colorPrimaryDark"
+                android:background="#ffffff"
                 android:layout_margin="5pt"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="75dp"
+        />
     </TableRow>
 
     <TableRow
@@ -125,25 +149,34 @@
                 android:id="@+id/square7"
                 android:layout_width="40pt"
                 android:layout_height="40pt"
-                android:background="@color/colorPrimaryDark"
+                android:background="#ffffff"
                 android:layout_margin="5pt"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="75dp"
+        />
 
         <Button
                 android:id="@+id/square8"
                 android:layout_width="40pt"
                 android:layout_height="40pt"
-                android:background="@color/colorPrimaryDark"
+                android:background="#ffffff"
                 android:layout_margin="5pt"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="75dp"
+        />
 
         <Button
                 android:id="@+id/square9"
                 android:layout_width="40pt"
                 android:layout_height="40pt"
-                android:background="@color/colorPrimaryDark"
+                android:background="#ffffff"
                 android:layout_margin="5pt"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="75dp"
+        />
     </TableRow>
 
     <TableRow>
@@ -153,6 +186,7 @@
                 android:layout_weight="50"
                 android:layout_marginTop="60dp"
                 android:id="@+id/resetBtn"
+                android:textSize="30dp"
         />
     </TableRow>
 

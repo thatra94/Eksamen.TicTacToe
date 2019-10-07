@@ -12,36 +12,20 @@ class HighScoreAdapter(val context: Context, private val name: ArrayList<String>
     private val inflater: LayoutInflater
             = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
-
-    /*fun HighScoreAdapter(context : Context, name : ArrayList<String>, score : ArrayList<String>) {
-        this.context = context
-        this.name = name
-        this.score = score
-    }*/
-
     override fun getItem(position: Int): Any {
-        /*if(position >= name.size) {
-            return score[position]
-        }*/
+
         return position
     }
 
     override fun getItemId(position: Int): Long {
-        if(position >= name.size) {
-            return score[position] as Long
-        }
-        return name[position].toLong()
+        return position.toLong()
     }
 
     override fun getCount(): Int {
         return name.size
-
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        /*if (convertView == null) {
-            return inflater.inflate(R.layout.lixst_score, parent, false)
-        }*/
 
         val playerName = name[position]
         var playerScore = score[position]

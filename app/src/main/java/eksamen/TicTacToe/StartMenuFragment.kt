@@ -24,7 +24,7 @@ class StartMenuFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         activity?.let {
             sharedView = ViewModelProviders.of(it).get(SharedViewModel::class.java)
-        } ?: throw Exception("Invalid activity")
+        }
 
         btnStart.setOnClickListener{
             start()
